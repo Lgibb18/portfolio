@@ -344,3 +344,43 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.language-switcher {
+    display: inline-flex;
+    padding: 3px;
+    background: var(--button);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.lang {
+    min-width: 30px;
+    padding: 7px 8px;
+    border-radius: 9px;
+    color: var(--text-secondary);
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition:
+        color 0.15s ease,
+        background-color 0.15s ease;
+}
+
+.lang:hover,
+.lang:focus-visible {
+    color: white;
+    background: var(--button-highlighted);
+    outline: none;
+}
+
+.lang.selected {
+    color: var(--background);
+    background: var(--ligyb);
+}
