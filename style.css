@@ -506,3 +506,62 @@ body {
     border-color: #00000000;
     margin-top: 0px;
 }
+
+.ss14-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.ss14-project {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    background: var(--button);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+}
+
+.ss14-project-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.ss14-project h4 {
+    margin: 0;
+    color: white;
+}
+
+.work-type {
+    padding: 5px 8px;
+    border-radius: 8px;
+    background: var(--tag);
+    color: var(--ligyb);
+    font-size: 11px;
+}
+
+.ss14-project p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.ss14-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.ss14-links a {
+    color: var(--ligyb);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.ss14-links a:hover {
+    text-decoration: underline;
+}
