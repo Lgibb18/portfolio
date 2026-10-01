@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="main.js" defer></script>
 </head>
 <body>
@@ -12,8 +12,8 @@
         <a class="ligyb big" href="#about">Ligyb</a>
         <div class="header-actions">
             <div class="language-switcher" aria-label="Language">
-                <a class="lang" id="lang-ru" href="./ru/index.html" lang="ru" hreflang="ru">RU</a>
                 <a class="lang selected" id="lang-eng" href="./index.html" lang="en" hreflang="en">EN</a>
+                <a class="lang" id="lang-ru" href="./ru/index.html" lang="ru" hreflang="ru">RU</a>
             </div>
             <nav class="nav" aria-label="Navigation">
                 <a class="nav-link" href="#about">About</a>
@@ -25,20 +25,81 @@
     </header>
 
     <main class="main">
-        <div class="about" id="about">
+        <section class="about" id="about">
             <img class="avatar" src="src/icon.png" alt="Avatar">
             <div class="about-info">
                 <h1 class="name">Hello, I am <span class="ligyb">Ligyb</span></h1>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="role">
+                    C# Software Engineer / Game & Engine Developer
+                </p>
+                <p class="description">
+                    I build gameplay systems, developer tools and rendering features in C# <br>
+                    I have shipped commercial Unity games for WebGL and Windows and contributed production fixes to live multiplayer projects
+                </p>
             </div>
-        </div>
+        </section>
 
-        <div class="projects">
+        <section class="experience">
+            <div class="section-name">
+                <h2 id="experience">Experience</h2>
+            </div>
+            <div class="experience-list">
+                <article class="experience-item">
+                    <div class="experience-header">
+                        <h3>Freelance Software Engineer</h3>
+                        <span class="experience-period">2025-<span name="current-year"/></span>
+                    </div>
+                
+                    <p class="experience-company">Self-employed</p>
+                    <p class="description">Developed commercial Unity games from prototype to final build</p>
+                    <ul>
+                        <li>Created educational WebGL games and a complete platfromers, simulators, quest games, etc.</li>
+                        <li>Integrated external APis to Unity projects</li>
+                    </ul>
+                
+                    <div class="tags">
+                         <span class="tag">Unity</span>
+                         <span class="tag">C#</span>
+                         <span class="tag">Game Development</span>
+                    </div>
+                </article>
+                <article class="experience-item">
+                    <div class="experience-header">
+                        <h3>C# Game & Engine Developer</h3>
+                        <span class="experience-period">2022-<span name="current-year"/></span>
+                    </div>
+                
+                    <p class="experience-company">Independent & Open-source Development</p>
+                    <p class="description">Building games, engine systems and developer tools in C# across personal, commercial and open-source projects</p>
+                    <ul>
+                        <li>Developed custom 2D engine foundations with ECS, rendering, (external) physics, serialization, plugins and debug tooling</li>
+                        <li>Working on a whole game with custom game engine</li>
+                        <li>Created gameplay systems, particles, lighting, asset pipelines and runtime development tools</li>
+                        <li>Contributed gameplay and engine code to the Space Station 14 ecosystem</li>
+                        <li>Worked with client-server architecture, prediction, shaders, integration tests and production bug fixing</li>
+                        <li>Worked in a team on a Unity game</li>
+                    </ul>
+                
+                    <div class="tags">
+                         <span class="tag">C#</span>
+                         <span class="tag">.NET</span>
+                         <span class="tag">Game Development</span>
+                         <span class="tag">Engine Development</span>
+                         <span class="tag">ECS</span>
+                         <span class="tag">OpenGL</span>
+                         <span class="tag">Networking</span>
+                         <span class="tag">ImGui</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section  class="projects">
             <div class="section-name">
                 <h2 id="projects">Projects</h2>
                 </div>
                     <div class="project-list">
-                        <div class="project-item">
+                        <article class="project-item">
                             <div class="project-top">
                                 <div class="project-top-bg--image">
                                     <img src="src/icon.png" alt="Project Icon">
@@ -66,8 +127,8 @@
                                     <a href="https://google.com" target="_blank">Google</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="project-item">
+                        </article>
+                        <article class="project-item">
                             <div class="project-top">
                                 <div class="project-top-bg--gradient">
                                 </div>
@@ -97,8 +158,8 @@
                                     <a href="https://google.com" target="_blank">Google</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="project-item">
+                        </article>
+                        <article class="project-item">
                             <div class="project-top">
                                 <div class="project-top-bg--gradient">
                                 </div>
@@ -132,12 +193,12 @@
                                     <a href="https://google.com" target="_blank">Google</a>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
-        </div>
+        </section>
 
-        <div class="skills">
+        <section class="skills">
             <div class="section-name">
                 <h2 id="skills">Skills</h2>
             </div>
@@ -151,9 +212,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="contact">
+        <section class="contact">
             <div class="section-name">
                 <h2 id="contact">Contact</h2>
             </div>
@@ -162,7 +223,7 @@
                 <a class="tag" href="https://github.com" target="_blank">GitHub</a>
                 <a class="tag" href="https://linkedin.com" target="_blank">LinkedIn</a>
             </div>
-        </div>
+        </section>
     </main>
 </body>
 </html>
