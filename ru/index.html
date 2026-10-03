@@ -1,170 +1,404 @@
-<!-- todo do it -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ligyb - портфолио</title>
+    <link rel="icon" type="image/x-icon" href="../src/favicon.ico">
     <link rel="stylesheet" href="../style.css">
-    <script src="main.js" defer></script>
+    <script src="../main.js" defer></script>
+
 </head>
 <body>
     <header class="top-panel">
         <a class="ligyb big" href="#about">Ligyb</a>
         <div class="header-actions">
-            <div class="language-switcher" aria-label="Language">
-                <a class="lang selected" id="lang-ru" href="../ru/index.html" lang="ru" hreflang="ru">RU</a>
+            <div class="language-switcher" aria-label="Язык">
                 <a class="lang" id="lang-eng" href="../index.html" lang="en" hreflang="en">EN</a>
+                <a class="lang selected" id="lang-ru" href="./index.html" lang="ru" hreflang="ru">RU</a>
             </div>
-            <nav class="nav" aria-label="Navigation">
-                <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#projects">Projects</a>
-                <a class="nav-link" href="#skills">Skills</a>
-                <a class="nav-link" href="#contact">Contact</a>
+            <nav class="nav" aria-label="Навигация">
+                <a class="nav-link" href="#about">Обо мне</a>
+                <a class="nav-link" href="#experience">Опыт</a>
+                <a class="nav-link" href="#projects">Проекты</a>
+                <a class="nav-link" href="#skills">Навыки</a>
             </nav>
         </div>
     </header>
 
     <main class="main">
-        <div class="about" id="about">
-            <img class="avatar" src="src/icon.png" alt="Avatar">
+        <section class="about" id="about">
+            <img class="avatar" src="../src/icon.png" alt="Аватар Ligyb">
             <div class="about-info">
-                <h1 class="name">Hello, I am <span class="ligyb">Ligyb</span></h1>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h1 class="name">Привет, я <span class="ligyb">Ligyb</span></h1>
+                <p class="role">
+                    C#-разработчик / Game & Engine Developer
+                </p>
+                <p class="description">
+                    Пишу игровые системы, инструменты и графику на C# <br>
+                    Делал коммерческие Unity-игры для WebGL и Windows, а также работал над мультиплеерными проектами
+                </p>
+                <div class="tags contacts project-links">
+                <a class="tag" href="https://github.com/Lgibb18" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="tag" href="https://t.me/Ligybss" target="_blank" rel="noopener noreferrer">Telegram</a>
+                <a class="tag" href="mailto:ligybs@gmail.com?subject=Portfolio%20contact">Почта</a>
+                <a class="tag"
+                   href="https://discord.com/users/574856443581300745"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Discord
+                </a>
             </div>
-        </div>
+            </div>
+        </section>
 
-        <div class="projects">
+        <section class="experience" id="experience">
             <div class="section-name">
-                <h2 id="projects">Projects</h2>
+                <h2>Опыт</h2>
+            </div>
+            <div class="experience-list">
+                <article class="experience-item">
+                    <div class="experience-header">
+                        <h3>Фриланс-разработчик</h3>
+                        <span class="experience-period">2025-<span name="current-year"></span></span>
+                    </div>
+
+                    <p class="experience-company">Частные заказы</p>
+                    <p class="description">Разрабатывал коммерческие игры на Unity от прототипа до финальной сборки</p>
+                    <ul>
+                        <li>Делал образовательные WebGL-игры, платформеры, симуляторы и квесты</li>
+                        <li>Интегрировал сторонние API в проекты на Unity</li>
+                    </ul>
+
+                    <div class="tags">
+                         <span class="tag">Unity</span>
+                         <span class="tag">C#</span>
+                         <span class="tag">Разработка игр</span>
+                    </div>
+                </article>
+                <article class="experience-item">
+                    <div class="experience-header">
+                        <h3>C#-разработчик</h3>
+                        <span class="experience-period">2024-<span name="current-year"></span></span>
+                    </div>
+
+                    <p class="experience-company">Space Station 14</p>
+                    <div class="ss14-projects">
+                        <article class="ss14-project">
+                            <div class="ss14-project-header">
+                                <h4>Sunrise Station</h4>
+                                <span class="work-type">Платно</span>
+                            </div>
+
+                            <p>Работал с серверной и клиентской частью, шейдерами, фиксил баги и закрывал способы абьюза</p>
+
+                            <div class="ss14-links">
+                                <a href="https://github.com/makura-games/sunrise-station/pull/2652">
+                                    Система градиентов ↗
+                                </a>
+                                <a href="https://github.com/makura-games/sunrise-station/pull/4695">
+                                    Шаттлы прибытия ↗
+                                </a>
+                                <a href="https://github.com/makura-games/sunrise-station/pull/4693">
+                                    Защита MIDI ↗
+                                </a>
+                            </div>
+                        </article>
+                        <article class="ss14-project">
+                            <div class="ss14-project-header">
+                                <h4>Imperial & Spellward</h4>
+                                <span class="work-type">Платно</span>
+                            </div>
+
+                            <p>Геймплейные механики, UI, системы пользовательского контента и визуальные эффекты</p>
+
+                            <div class="ss14-links">
+                                <a href="https://github.com/imperial-space/SW-public/pull/345">
+                                    Картины и книги ↗
+                                </a>
+                                <a href="https://github.com/imperial-space/SW-public/pull/372">
+                                    Торговля ↗
+                                </a>
+                                <a href="https://github.com/imperial-space/SW-public/pull/682">
+                                    Визуал моря ↗
+                                </a>
+                                <a href="https://github.com/imperial-space/SW-public/pull/256">
+                                    Ездовые мобы ↗
+                                </a>
+                            </div>
+                        </article>
+                        <article class="ss14-project">
+                            <div class="ss14-project-header">
+                                <h4>RobustToolbox</h4>
+                                <span class="work-type">Upstream</span>
+                            </div>
+
+                            <p>Исправил интерактивные теги в RichText и OutputPanel</p>
+
+                            <div class="ss14-links">
+                                <a href="https://github.com/space-wizards/RobustToolbox/pull/5428">
+                                    Принятый PR
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="tags">
+                         <span class="tag">C#</span>
+                         <span class="tag">.NET</span>
+                         <span class="tag">Разработка игр</span>
+                         <span class="tag">Разработка движков</span>
+                         <span class="tag">ECS</span>
+                         <span class="tag">GLSL</span>
+                         <span class="tag">Сетевой код</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section  class="projects">
+            <div class="section-name">
+                <h2 id="projects">Проекты</h2>
                 </div>
                     <div class="project-list">
-                        <div class="project-item">
+                        <article class="project-item">
                             <div class="project-top">
                                 <div class="project-top-bg--image">
-                                    <img src="src/icon.png" alt="Project Icon">
+                                    <img src="../src/rpwrn-background.png" alt="Космическая сцена из rpwrn">
                                 </div>
 
                                 <div class="project-top-line">
-                                    <p class="project-path">/github/something</p>
+                                    <p class="project-path">/wip/rpwrn</p>
                                 </div>
 
-                                <div class="project-top-content project-top-content--icon">
-                                    <img src="src/icon.png" alt="">
-                                </div>
+                                <!-- <div class="project-top-content project-top-content--icon">
+                                    <img src="../src/rpwrn-background.png" alt="">
+                                </div> -->
                             </div>
                             <div class="project-bottom">
-                                <div class="project-title">Something</div>
-                                <div class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo.</div>
+                                <div class="project-title">rpwrn <span class="project-aftertitle">2026</span></div>
+                                <div class="project-description">2D космический экшен-рогалик, который пишу практически с нуля<br><br>
+                                    Собственный OpenGL-рендерер, система частиц и инструменты отладки во время работы игры</div>
 
                                 <div class="tags">
-                                    <span class="tag">Tag1</span>
-                                    <span class="tag">Tag2</span>
-                                    <span class="tag">Tag3</span>
+                                    <span class="tag">C#</span>
+                                    <span class="tag">OpenGL</span>
+                                    <span class="tag">ImGui</span>
                                 </div>
-                                <div class="project-links">
+                                <!-- <div class="project-links">
                                     <a href="https://github.com" target="_blank">GitHub</a>
                                     <a href="https://google.com" target="_blank">Google</a>
+                                </div> -->
+                            </div>
+                        </article>
+                        <article class="project-item">
+                            <div class="project-top">
+                                <div class="project-top-bg--image">
+                                    <img src="../src/ss14-background.png" alt="Сцена из Space Station 14">
+                                </div>
+
+                                <div class="project-top-line">
+                                    <p class="project-path">/games/ss14</p>
+                                </div>
+
+                                <!-- <div class="project-top-content project-top-content--icon">
+                                    <img src="../src/rpwrn-background.png" alt="">
+                                </div> -->
+                            </div>
+                            <div class="project-bottom">
+                                <div class="project-title">Space Station 14 <span class="project-aftertitle">Контрибьютор</span></div>
+                                <div class="project-description">Контрибьючу в несколько проектов вокруг Space Station 14: крупные серверные форки и RobustToolbox - C# движок самой игры</div>
+
+                                <div class="project-links">
+                                    <a href="https://store.steampowered.com/app/1255460/Space_Station_14/" target="_blank">Steam</a>
+                                    <a href="https://github.com/space-wizards/RobustToolbox" target="_blank">Код движка</a>
+                                </div>
+                                <div class="tags">
+                                    <span class="tag">C#</span>
+                                    <span class="tag">Открытый код</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="project-item">
+                        </article>
+                        <article class="project-item">
                             <div class="project-top">
+                                <div class="project-top-bg--image">
+                                    <img src="../src/balls-background.png" alt="Сцена из Balls Engine">
+                                </div>
+
+                                <div class="project-top-line">
+                                    <p class="project-path">/engines/balls</p>
+                                </div>
+
+                                <!-- <div class="project-top-content project-top-content--icon">
+                                    <img src="../src/rpwrn-background.png" alt="">
+                                </div> -->
+                            </div>
+                            <div class="project-bottom">
+                                <div class="project-title">Balls Engine <span class="project-aftertitle">2025</span></div>
+                                <div class="project-description">Экспериментальный движок на C# с ECS, event bus, DI, сериализацией, рефлексией и кодогенерацией через Roslyn<br>
+                                Перерождён в rpwrn</div>
+
+                                <div class="tags">
+                                    <span class="tag">C#</span>
+                                    <span class="tag">ImGui</span>
+                                    <span class="tag">ECS</span>
+                                    <span class="tag">Roslyn</span>
+                                    <span class="tag">Box2D</span>
+                                    <span class="tag">xUnit</span>
+                                </div>
+                                <!-- <div class="project-links">
+                                    <a href="https://github.com" target="_blank">GitHub</a>
+                                    <a href="https://google.com" target="_blank">Google</a>
+                                </div> -->
+                            </div>
+                        </article>
+                        <article class="project-item">
+                            <div class="project-top">
+                                <!-- <div class="project-top-bg--image">
+                                    <img src="../src/ligybsbot-background.png" alt="Логотип бота">
+                                </div> -->
                                 <div class="project-top-bg--gradient">
                                 </div>
 
                                 <div class="project-top-line">
-                                    <p class="project-path">/github/something</p>
-                                </div>
-
-                                <div class="project-top-content project-top-content--code">
-                                    <pre>
-                                        > echo "Hello, World!"
-                                        Hello, World!
-                                    </pre>
-                                </div>
-                            </div>
-                            <div class="project-bottom">
-                                <div class="project-title">Something</div>
-                                <div class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo.</div>
-
-                                <div class="tags">
-                                    <span class="tag">Tag1</span>
-                                    <span class="tag">Tag2</span>
-                                    <span class="tag">Tag3</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com" target="_blank">GitHub</a>
-                                    <a href="https://google.com" target="_blank">Google</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-item">
-                            <div class="project-top">
-                                <div class="project-top-bg--gradient">
-                                </div>
-
-                                <div class="project-top-line">
-                                    <p class="project-path">/github/something</p>
+                                    <p class="project-path">/discord/ligybsbot</p>
                                 </div>
 
                                 <div class="project-top-content project-top-content--split">
                                     <div class="split-text">
-                                        <div class="split-title">Something</div>
-                                        <div class="split-sub">Lorem ipsum dolor sit amet</div>
+                                        <div class="split-title">Ligyb's Bot#9464</div>
+                                        <div class="split-sub">/inventory /ticket /mute /snippet</div>
                                     </div>
-                                
+
                                     <div class="split-icon">
-                                        <img src="src/icon.png" alt="">
+                                        <img src="../src/icon.png" alt="">
                                     </div>
+                                </div>
+
+                                <!-- <div class="project-top-content project-top-content--icon">
+                                    <img src="../src/rpwrn-background.png" alt="">
+                                </div> -->
+                            </div>
+                            <div class="project-bottom">
+                                <div class="project-title">Ligyb's Bot <span class="project-aftertitle">2023-2026</span></div>
+                                <div class="project-description">Большой Discord-бот на Python, который я несколько лет развивал для собственного сообщества<br>
+                                    Умеет перезагружать модули без полного рестарта, обновляться через Git и менять конфигурацию на лету. Также есть AI-чат, модерация и куча более мелких систем
+                                </div>
+
+                                <div class="tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Disnake</span>
+                                    <span class="tag">SQLite</span>
+                                </div>
+                                <!-- <div class="project-links">
+                                    <a href="https://github.com" target="_blank">GitHub</a>
+                                    <a href="https://google.com" target="_blank">Google</a>
+                                </div> -->
+                            </div>
+                        </article>
+                        <article class="project-item">
+                            <div class="project-top">
+                                <div class="project-top-bg--image">
+                                    <img src="../src/space-background.gif" alt="Геймплей Space Survivor">
+                                </div>
+
+                                <div class="project-top-line">
+                                    <p class="project-path">/games/vampirelike</p>
+                                </div>
+
+                                <!-- <div class="project-top-content project-top-content--icon">
+                                    <img src="../src/rpwrn-background.png" alt="">
+                                </div> -->
+                            </div>
+                            <div class="project-bottom">
+                                <div class="project-title">Space Survivor <span class="project-aftertitle">2025</span></div>
+                                <div class="project-description">Прототип vampire-like на Unity с модульным оружием, модификаторами предметов, волнами врагов и эффектами чёрной дыры<br>Для проекта также написана целая система аттрибутов для Unity Editor</div>
+                                <div class="project-links">
+                                    <a href="https://ligyb.itch.io/upscale" target="_blank">Itch</a>
+                                </div>
+                                <div class="tags">
+                                    <span class="tag">C#</span>
+                                    <span class="tag">Unity</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="project-item">
+                            <div class="project-top">
+                                <div class="project-top-bg--image">
+                                    <img src="../src/nb2-background.png" alt="Сцена из физической песочницы">
+                                </div>
+
+                                <div class="project-top-line">
+                                    <p class="project-path">/simulators/nb2</p>
                                 </div>
                             </div>
                             <div class="project-bottom">
-                                <div class="project-title">Something</div>
-                                <div class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo.</div>
+                                <div class="project-title">Untitled sandbox<span class="project-aftertitle">2024</span></div>
+                                <div class="project-description">Небольшая 2D-физическая песочница на Python<br>
+                                Есть компонентная система объектов, физика на Pymunk, инвентарь и внутриигровая консоль с debug-командами</div>
 
-                                <div class="tags">
-                                    <span class="tag">Tag1</span>
-                                    <span class="tag">Tag2</span>
-                                    <span class="tag">Tag3</span>
-                                </div>
                                 <div class="project-links">
-                                    <a href="https://github.com" target="_blank">GitHub</a>
-                                    <a href="https://google.com" target="_blank">Google</a>
+                                    <a href="https://github.com/Lgibb18/sandboxing" target="_blank">GitHub</a>
+                                </div>
+                                <div class="tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Pygame</span>
+                                    <span class="tag">Физика</span>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     </div>
-                </div>
-        </div>
+        </section>
 
-        <div class="skills">
+        <section class="skills" id="skills">
             <div class="section-name">
-                <h2 id="skills">Skills</h2>
+                <h2>Навыки</h2>
             </div>
+
             <div class="section-panel">
                 <div class="skill-group">
-                    <p class="group-name">Unity idk</p>
+                    <p class="group-name">Основа</p>
                     <div class="tags">
-                        <span class="tag">Tag1</span>
-                        <span class="tag">Tag2</span>
-                        <span class="tag">Tag3</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">.NET</span>
+                        <span class="tag">Unity</span>
+                        <span class="tag">Git</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <p class="group-name">Разработка игр</p>
+                    <div class="tags">
+                        <span class="tag">Игровые системы</span>
+                        <span class="tag">Интерфейсы Unity</span>
+                        <span class="tag">2D-физика</span>
+                        <span class="tag">WebGL</span>
+                        <span class="tag">RobustToolbox</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <p class="group-name">Графика</p>
+                    <div class="tags">
+                        <span class="tag">OpenGL</span>
+                        <span class="tag">GLSL</span>
+                        <span class="tag">OpenTK</span>
+                        <span class="tag">ImGui.NET</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <p class="group-name">Дополнительно</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Rust (очень базово)</span>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="contact">
-            <div class="section-name">
-                <h2 id="contact">Contact</h2>
-            </div>
-            <div class="tags section-panel">
-                <a class="tag" href="https://google.com" target="_blank">Google</a>
-                <a class="tag" href="https://github.com" target="_blank">GitHub</a>
-                <a class="tag" href="https://linkedin.com" target="_blank">LinkedIn</a>
-            </div>
-        </div>
+        </section>
     </main>
 </body>
 </html>

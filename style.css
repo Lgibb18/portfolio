@@ -25,14 +25,14 @@ html {
 }
 
 @font-face {
-    font-family: 'Azeret Mono';
-    src: url('src/AzeretMono.ttf') format('truetype');
+    font-family: 'Martian Mono';
+    src: url('src/MartianMono.ttf') format('truetype');
     font-display: swap;
 }
 
 body {
     margin: 0;
-    font-family: 'Azeret Mono', monospace;
+    font-family: 'Martian Mono', monospace;
     background:
         radial-gradient(circle at top, var(--background-section), transparent 40%),
         linear-gradient(180deg, var(--background) 0%, var(--background-section) 100%);
@@ -176,7 +176,7 @@ body {
 
 .project-item {
     flex: 0 0 calc((100% - 40px) / 3);
-    height: 450px;
+    height: 490px;
     background-color: var(--button);
     border: 2px solid var(--border);
     border-radius: 15px;
