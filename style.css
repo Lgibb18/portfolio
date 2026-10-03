@@ -1,3 +1,14 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 :root {
     --border: #17312e;
     --border-light: #234740;
@@ -565,3 +576,54 @@ body {
 .ss14-links a:hover {
     text-decoration: underline;
 }
+
+@media (min-width: 850px) {
+    .project-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .project-item--featured {
+        grid-column: span 2;
+    }
+}
+
+/* some interactive hover things */
+.project-item,
+.ss14-project {
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.project-item:hover,
+.project-item:focus-within,
+.ss14-project:hover,
+.ss14-project:focus-within {
+    transform: translateY(-4px);
+    border-color: var(--ligyb);
+    box-shadow: 0 16px 32px rgb(0 0 0 / 25%);
+}
+
+.project-top-bg--image img {
+    transition: transform .35s ease;
+}
+
+.project-item:hover .project-top-bg--image img {
+    transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-item,
+    .ss14-project,
+    .project-top-bg--image img {
+        transition: none;
+    }
+}
+
+span.tag {
+    transition: background-color .2s ease, border-color .2s ease;
+}
+
+span.tag:hover {
+    background-color: #1c3636;
+    border-color: #32645d;
+}
+/* end */
