@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: var(--header-offset, 100px);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -617,16 +617,18 @@ span.tag:hover {
 /* end */
 
 @media (max-width: 700px) {
-    html {
-        scroll-padding-top: 130px;
-    }
-
     .top-panel {
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 8px;
-        width: calc(100% - 20px);
+        top: 12px;
+        width: calc(100% - 24px);
         padding: 10px;
+    }
+
+    .top-panel > .ligyb {
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .header-actions {
@@ -635,21 +637,26 @@ span.tag:hover {
 
     .language-switcher {
         grid-column: 2;
+        grid-row: 1;
     }
 
     .nav {
         grid-column: 1 / -1;
-        justify-content: space-between;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 0;
     }
 
     .nav-link {
-        padding: 8px 6px;
-        font-size: 12px;
+        justify-content: center;
+        padding: 8px 2px;
+        font-size: clamp(10px, 3vw, 12px);
+        white-space: nowrap;
     }
 
     .about {
-        margin-top: 135px;
+        margin-top: calc(var(--header-offset, 130px) + 5px);
     }
 
     .project-list,
