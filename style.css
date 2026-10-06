@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--header-offset, 100px);
+    background-color: var(--background-section);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -40,10 +41,14 @@ body {
     min-height: 100vh;
 }
 
+.main {
+    padding-bottom: clamp(80px, 12vh, 150px);
+}
+
 .top-panel {
     z-index: 1000;
     position: fixed;
-    top: 2vh;
+    top: min(2vh, 24px);
     left: 50%;
     transform: translateX(-50%);
     width: min(1000px, 90%);
@@ -56,6 +61,11 @@ body {
     border: 2px solid var(--border);
     border-radius: 15px;
     box-sizing: border-box;
+    transition: transform 0.25s ease;
+}
+
+.top-panel.is-hidden {
+    transform: translate(-50%, calc(-100% - 24px));
 }
 
 .big {
@@ -599,6 +609,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .top-panel,
     .project-item,
     .ss14-project,
     .project-top-bg--image img {
